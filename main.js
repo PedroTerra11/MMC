@@ -34,20 +34,3 @@ console.log("mdc: " + calculo)
 }
 
 });
-
-/* let numero
-let numero2 
-let calculo
-
-if (numero2 === 0){
-    console.log(numero1)
-} else {
-    if (numero1 > numero2){
-        calculo = (numero2, numero1 % numero2);
-    } else {
-        calculo = (numero1, numero2 % numero1)
-    }
-}
-
-console.log(calculo)
- */
