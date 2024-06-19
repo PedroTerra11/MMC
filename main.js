@@ -1,39 +1,43 @@
 let numero;
 let numero2;
-let mmc;
+let maior;
 
 console.log("Digite um número");
 process.stdin.on("data", function (data) {
-  let entrada_usuario = data.toString().trim();
-  let num = parseInt(entrada_usuario, 10);
+  let entrada_usuario = +data.toString().trim();
 
-  if(num <= 0){
-    console.log("Número inválido")
-}else if (!numero) {
+  if (!numero) {
+    numero = entrada_usuario;
     console.log("Digite outro número");
-    numero = num;
   } else {
-    numero2 = num;
-    for (let i = 1; i <= numero * numero2; i++) {
-      if (i % numero == 0 && i % numero2 == 0) {
-        mmc = i;
-        break;
+    numero2 = entrada_usuario;
+
+    let i;
+    let maior;
+    if (numero > numero2) {
+      i = numero;
+      maior = numero;
+    } else {
+      i = numero2;
+      maior = numero2;
     }
+
+    for (i; i <= numero * numero2; i += maior) {
+      if (i % numero == 0 && i % numero2 == 0) {
+        console.log("O MMC dos números", numero, "e", numero2, "é igual:", i);
+      }
+    }
+
+  if (!numero2) {
+  } else {
+    if (numero > numero2) {
+      calculo = (numero2, numero % numero2);
+    } else {
+      calculo = (numero, numero2 % numero);
+    }
+    console.log("O MDC dos números", numero, "e", numero2, "é igual:", calculo);
+  }
+});
     
 }
 
-if (numero2 === 0){
-  console.log(numero)
-} else {
-  if (numero > numero2){
-      calculo = (numero2, numero % numero2);
-  } else {
-      calculo = (numero, numero2 % numero)
-  }
-}
-
-console.log("mdc: " + calculo)
-    console.log("mmc: " + mmc);
-}
-
-});
