@@ -19,8 +19,21 @@ process.stdin.on("data", function (data) {
         mmc = i;
         break;
     }
+    
 }
-    console.log("O mmc dos números", numero, "e", numero2, "é igual:", mmc);
+
+if (numero2 === 0){
+  console.log(numero)
+} else {
+  if (numero > numero2){
+      calculo = (numero2, numero % numero2);
+  } else {
+      calculo = (numero, numero2 % numero)
+  }
+}
+
+console.log("mdc: " + calculo)
+    console.log("mmc: " + mmc);
 }
 
 });
