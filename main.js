@@ -27,7 +27,6 @@ process.stdin.on("data", function (data) {
         console.log("O MMC dos números", numero, "e", numero2, "é igual:", i);
       }
     }
-  }
 
   if (!numero2) {
   } else {
@@ -39,3 +38,6 @@ process.stdin.on("data", function (data) {
     console.log("O MDC dos números", numero, "e", numero2, "é igual:", calculo);
   }
 });
+    
+}
+
