@@ -31,9 +31,9 @@ process.stdin.on("data", function (data) {
     if (!numero2) {
     } else {
       if (numero > numero2) {
-        calculo = (numero2, numero % numero2);
+        calculo = (numero % numero2);
       } else {
-        calculo = (numero, numero2 % numero);
+        calculo = (numero2 % numero);
       }
       console.log(
         "O MDC dos números",
