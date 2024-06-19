@@ -7,7 +7,9 @@ process.stdin.on("data", function (data) {
   let entrada_usuario = data.toString().trim();
   let num = parseInt(entrada_usuario, 10);
 
-  if (!numero) {
+  if(num <= 0){
+    console.log("Número inválido")
+}else if (!numero) {
     console.log("Digite outro número");
     numero = num;
   } else {
@@ -19,6 +21,7 @@ process.stdin.on("data", function (data) {
     }
     
 }
+
 if (numero2 === 0){
   console.log(numero)
 } else {
